@@ -1,0 +1,64 @@
+/* Center the card on the page */
+.detail-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Let the card size itself to its content */
+.detail-card {
+  background-color: #ffffff !important;
+  color: #212121 !important;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  /* remove fixed height so it wraps content */
+}
+
+/* Only constrain the image window */
+.image-container {
+  width: 100%;
+  /* max-height but let it shrink if image is smaller */
+  max-height: 400px;
+  overflow: hidden;
+}
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Title below the image */
+mat-card-title {
+  padding: 16px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* Content area scrolls only if extremely long */
+mat-card-content {
+  padding: 0 16px 16px;
+  color: #424242;
+  line-height: 1.4;
+}
+
+/* Button row at bottom */
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 16px;
+}
+
+/* Spinner fallback */
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.mat-mdc-card-title {
+ text-align: left;
+}

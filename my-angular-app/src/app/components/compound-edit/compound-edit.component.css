@@ -1,0 +1,35 @@
+.form-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+mat-card {
+  background-color: #ffffff !important;
+  color: #212121 !important;
+  padding: 24px;
+  max-width: 600px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+/* spinner styling */
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* center action buttons */
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}

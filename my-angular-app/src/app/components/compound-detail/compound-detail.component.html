@@ -1,0 +1,22 @@
+<div *ngIf="loading" class="spinner">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!loading" class="detail-container">
+  <mat-card class="detail-card">
+    <div class="image-container">
+      <img mat-card-image [src]="compound.image" [alt]="compound.name" />
+    </div>
+
+    <mat-card-title>{{ compound.name }}</mat-card-title>
+
+    <mat-card-content>
+      <p>{{ compound.description }}</p>
+    </mat-card-content>
+
+    <div class="button-group">
+      <button mat-button (click)="goBack()">Back</button>
+      <button mat-button (click)="goToEdit()">Edit</button>
+    </div>
+  </mat-card>
+</div>

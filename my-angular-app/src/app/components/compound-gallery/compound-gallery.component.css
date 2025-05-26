@@ -1,0 +1,114 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
+  gap: 16px;
+  margin: 20px;
+}
+.compound-card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.compound-card:hover { transform: scale(1.03); }
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.compound-card {
+  background-color: #fff;
+  color: #000;
+}
+.mat-card-title {
+  color: #333;
+}
+/* 2 rows of 5 cards each (pageSize = 10) */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* exactly 5 columns */
+  gap: 16px;
+  margin: 20px;
+}
+
+/* force every card to the same height and vertical layout */
+.compound-card {
+  display: flex;
+  flex-direction: column;
+  height: 360px;           /* uniform total card height */
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+/* image area: fixed height, centered, preserving aspect */
+.compound-card img {
+  height: 220px;           /* fixed image container */
+  width: 100%;
+  object-fit: contain;
+}
+
+/* title sits at bottom of card, centered */
+.mat-card-title {
+  
+  text-align: left;
+  font-size: 1rem;
+}
+
+/* hover effect */
+.compound-card:hover {
+  transform: scale(1.03);
+}
+
+/* spinner centering */
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+/* center the compound name */
+
+/* force exactly 5 columns */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin: 20px;
+}
+
+/* make every card the same height, with title pinned to the bottom */
+.compound-card {
+  display: flex;
+  flex-direction: column;
+  height: 320px;        /* total card height */
+  cursor: pointer;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* fixed‐height image container */
+.compound-card img[mat-card-image] {
+  flex: 0 0 240px;      /* image takes up 240px of the 320px total */
+  width: 100%;
+  object-fit: contain;  /* preserve aspect within container */
+}
+
+/* title always sits at bottom */
+
+/* simple hover effect */
+.compound-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+/* center spinner if you ever show it here */
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.compound-card .mat-card-title {
+  text-align: left !important;
+  padding-left: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+

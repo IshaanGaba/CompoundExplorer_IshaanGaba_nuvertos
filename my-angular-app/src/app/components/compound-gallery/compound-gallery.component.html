@@ -1,0 +1,19 @@
+<div *ngIf="loading" class="spinner">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div class="card-grid" *ngIf="!loading">
+  <mat-card
+    *ngFor="let c of compounds"
+    class="compound-card"
+    (click)="goTo(c.id)">
+    <img mat-card-image [src]="c.image" [alt]="c.name" />
+    <mat-card-title>{{ c.name }}</mat-card-title>
+  </mat-card>
+</div>
+
+<mat-paginator
+  [length]="total"
+  [pageSize]="10"
+  (page)="onPageChange($event)">
+</mat-paginator>
